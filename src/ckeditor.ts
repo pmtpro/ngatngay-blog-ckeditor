@@ -44,7 +44,6 @@ import {
 	TableColumnResize,
 	TableToolbar
 } from '@ckeditor/ckeditor5-table';
-import { AccessibilityHelp } from '@ckeditor/ckeditor5-ui';
 import { Undo } from '@ckeditor/ckeditor5-undo';
 import { SimpleUploadAdapter } from '@ckeditor/ckeditor5-upload';
 
@@ -53,7 +52,6 @@ import { SimpleUploadAdapter } from '@ckeditor/ckeditor5-upload';
 
 class Editor extends ClassicEditor {
 	public static override builtinPlugins = [
-		AccessibilityHelp,
 		Alignment,
 		BlockQuote,
 		Bold,
@@ -135,8 +133,7 @@ class Editor extends ClassicEditor {
 				'strikethrough',
 				'|',
 				'removeFormat',
-				'sourceEditing',
-				'accessibilityHelp'
+				'sourceEditing'
 			]
 		},
 		language: 'en',
