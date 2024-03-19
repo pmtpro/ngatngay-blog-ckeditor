@@ -32,8 +32,8 @@ module.exports = {
 	optimization: {
 		minimizer: [
 			new TerserWebpackPlugin( {
-				sourceMap: true,
 				terserOptions: {
+					sourceMap: false,
 					output: {
 						// Preserve CKEditor 5 license comments.
 						comments: /^!/
@@ -49,7 +49,7 @@ module.exports = {
 			// UI language. Language codes follow the https://en.wikipedia.org/wiki/ISO_639-1 format.
 			// When changing the built-in language, remember to also change it in the editor's configuration (src/ckeditor.ts).
 			language: 'en',
-			additionalLanguages: 'all'
+			//additionalLanguages: 'all'
 		} ),
 		new webpack.BannerPlugin( {
 			banner: bundler.getLicenseBanner(),
